@@ -8,7 +8,7 @@
 import Foundation
 
 extension ETFKit {
-    internal static func decode(_ data: Data) throws -> Any? {
+    public static func decode(_ data: Data) throws -> Any? {
         // Decode header
         guard data[0] == ETFKit.VERSION else {
             throw ETFDecodingError.MismatchingTag("Expected version \(ETFKit.VERSION), got \(data[0])")
