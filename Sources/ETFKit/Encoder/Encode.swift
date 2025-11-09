@@ -8,7 +8,7 @@
 import Foundation
 
 extension ETFKit {
-    internal static func encode(_ data: Any) throws -> Data {
+    public static func encode(_ data: Any) throws -> Data {
         var d = Data()
         d.insertHeader()
         try d.appendAny(data)
